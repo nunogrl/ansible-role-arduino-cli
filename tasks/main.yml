@@ -1,2 +1,22 @@
 ---
 # tasks file for ansible-role-arduino-cli
+- name: Install arduino-cli
+  shell:
+    curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+  args:
+    warn: no
+
+- name: add user to dialout group
+  shell:
+    usermod -a -G dialout "{{ deploy_user }}"
+  args:
+    warn: no
+
+- name: add user to tty group
+  shell:
+    usermod -a -G tty "{{ deploy_user }}"
+  args:
+    warn: no
+
+
+

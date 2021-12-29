@@ -1,7 +1,16 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This installs:
+
+- arduino-cli
+- adds the user to dialout group
+- installs udev rules for arduino boards
+
+
+on UDEV:
+
+- `arduino avr udev <http://www.joakimlinde.se/microcontrollers/arduino/avr/udev.php>`_
 
 Requirements
 ------------
@@ -22,6 +31,8 @@ Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+.. code:block:: YAML
 
     - hosts: servers
       roles:
