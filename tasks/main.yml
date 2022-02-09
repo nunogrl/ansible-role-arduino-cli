@@ -17,6 +17,3 @@
     usermod -a -G tty "{{ deploy_user }}"
   args:
     warn: no
-
-
-
